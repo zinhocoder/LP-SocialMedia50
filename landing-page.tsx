@@ -21,14 +21,14 @@ export default function LandingPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section with VSL */}
-      <section className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-r from-pink-100 via-purple-50 to-pink-100">
-        <div className="absolute inset-0 bg-cover bg-center opacity-5"></div>
-        <div className="container px-4 mx-auto max-w-6xl relative z-10">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div className="inline-block px-4 py-1 rounded-full bg-pink-100 text-pink-800 text-sm font-medium shadow-sm">
-                Exclusivo para 50+
-              </div>
+<section className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-r from-pink-100 via-purple-50 to-pink-100">
+  <div className="absolute inset-0 bg-cover bg-center opacity-5"></div>
+  <div className="container px-4 mx-auto max-w-6xl relative z-10">
+    <div className="grid md:grid-cols-2 gap-16 items-center">
+      <div className="space-y-8">
+        <img src="/logo.png" alt="Logo" className="h-20 md:h-24 w-auto" />
+
+
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-700 to-pink-500 leading-tight">
                 <span>Se sente ultrapassado</span> pela tecnologia?
               </h1>
@@ -73,7 +73,7 @@ export default function LandingPage() {
         loop
         playsInline
       >
-        <source src="/monicavideo.mp4" type="video/mp4" />
+        <source src="/monicavsl.mp4" type="video/mp4" />
         Seu navegador não suporta vídeos HTML5.
       </video>
       <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-40 transition-all">
@@ -95,7 +95,7 @@ export default function LandingPage() {
       className="w-full h-full object-cover"
       playsInline
     >
-      <source src="/monicavideo.mp4" type="video/mp4" />
+      <source src="/monicavsl.mp4" type="video/mp4" />
       Seu navegador não suporta vídeos HTML5.
     </video>
   )}
@@ -190,7 +190,7 @@ export default function LandingPage() {
             "O mundo é digital, e nós precisamos interagir"
           </h2>
           <p className="text-xl opacity-90 text-white">
-            Se abra para novas possibilidades. A vida está aqui para ser aproveitada e nós, da terceira idade, ainda
+            Dê uma chance para novas possibilidades. A vida está aqui para ser aproveitada e nós, da terceira idade, ainda
             podemos nos desafiar. Divirta-se no processo e esteja aberto às possibilidades!
           </p>
           <p className="mt-6 text-lg font-medium text-white">- Mônica Amoroso</p>
@@ -359,17 +359,17 @@ export default function LandingPage() {
               {
                 name: "Maria Helena, 62 anos",
                 text: "Este curso mudou minha vida! Agora consigo compartilhar minhas receitas no Instagram e já tenho mais de 500 seguidores.",
-                image: "/placeholder.svg?height=100&width=100",
+                image: "/61.jpg?height=100&width=100",
               },
               {
                 name: "Carlos Alberto, 58 anos",
                 text: "Nunca pensei que poderia me tornar um criador de conteúdo. Hoje compartilho minhas viagens e conecto-me com pessoas do mundo todo.",
-                image: "/placeholder.svg?height=100&width=100",
+                image: "/72.jpg?height=100&width=100",
               },
               {
                 name: "Lúcia Ferreira, 65 anos",
                 text: "As dicas de fotografia e vídeo são excelentes! Consegui melhorar muito a qualidade do meu conteúdo sem gastar com equipamentos caros.",
-                image: "/placeholder.svg?height=100&width=100",
+                image: "/52.jpg?height=100&width=100",
               },
             ].map((testimonial, index) => (
               <div
@@ -475,11 +475,6 @@ export default function LandingPage() {
                 question: "Preciso aparecer em vídeos?",
                 answer:
                   "Não necessariamente. Embora vídeos sejam uma forma poderosa de conexão, você pode criar conteúdo apenas com fotos e textos se preferir. O material cobre todas essas possibilidades.",
-              },
-              {
-                question: "O material tem atualizações?",
-                answer:
-                  "Sim! As redes sociais estão sempre evoluindo, e nosso material também. Você receberá atualizações sempre que houver mudanças significativas nas plataformas.",
               },
               {
                 question: "Posso realmente ganhar dinheiro com isso?",
@@ -681,7 +676,7 @@ export default function LandingPage() {
               </div>
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-pink-600 flex-shrink-0 mt-0.5" />
-                <p className="text-left text-pink-700">Acesso a atualizações futuras</p>
+                <p className="text-left text-pink-700">Acesso vitalício</p>
               </div>
             </div>
 
