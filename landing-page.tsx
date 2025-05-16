@@ -191,7 +191,7 @@ export default function LandingPage() {
           </h2>
           <p className="text-xl opacity-90 text-white">
             Se abra para novas possibilidades. A vida está aqui para ser aproveitada e nós, da terceira idade, ainda
-            podemos nos desafiar. Se divirta no processo e esteja aberto às possibilidades!
+            podemos nos desafiar. Divirta-se no processo e esteja aberto às possibilidades!
           </p>
           <p className="mt-6 text-lg font-medium text-white">- Mônica Amoroso</p>
         </div>
