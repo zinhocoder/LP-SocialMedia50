@@ -44,7 +44,7 @@ export default function LandingPage() {
   href="https://pay.hotmart.com/D99483408X?off=sy32nphk&_hi=eyJjaWQiOiIxNzQ3MjQyMTc2NTIyODA3NjQ0NzI2NTE3NjcwOTAwIiwiYmlkIjoiMTc0NzI0MjE3NjUyMjgwNzY0NDcyNjUxNzY3MDkwMCIsInNpZCI6ImFkMmFlZDIzYWEzNTRiMTZhOTgzODFmZTJiYWUxODM5In0=.1747361783581&bid=1747361787902"
   target="_blank"
   rel="noopener noreferrer"
-  className="block w-fit"
+  className="block w-fit max-w-full overflow-hidden"
 >
   <Button
     className="bg-gradient-to-r from-pink-500 to-pink-700 hover:from-pink-600 hover:to-pink-800 text-lg py-7 px-8 rounded-xl shadow-lg 
@@ -285,8 +285,7 @@ export default function LandingPage() {
     rel="noopener noreferrer"
   >
     <Button
-      className="bg-gradient-to-r from-pink-500 to-pink-700 hover:from-pink-600 hover:to-pink-800
-                 text-white text-2xl py-6 px-14 rounded-xl
+      className="bg-gradient-to-r from-pink-500 to-pink-700 hover:from-pink-600 hover:to-pink-800 text-white text-2xl py-6 px-6 sm:px-14 rounded-xl
                  shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl
                  border-b-4 border-pink-800 active:border-b-0 active:mt-1"
     >
@@ -690,7 +689,7 @@ export default function LandingPage() {
   href="https://pay.hotmart.com/D99483408X?off=sy32nphk&_hi=eyJjaWQiOiIxNzQ3MjQyMTc2NTIyODA3NjQ0NzI2NTE3NjcwOTAwIiwiYmlkIjoiMTc0NzI0MjE3NjUyMjgwNzY0NDcyNjUxNzY3MDkwMCIsInNpZCI6ImFkMmFlZDIzYWEzNTRiMTZhOTgzODFmZTJiYWUxODM5In0=.1747361783581&bid=1747361787902"
   target="_blank"
   rel="noopener noreferrer"
-  className="block w-full"
+  className="block w-full max-w-full overflow-hidden"
 >
   <Button
     className="w-full bg-gradient-to-r from-pink-500 to-pink-700 hover:from-pink-600 hover:to-pink-800 text-white text-lg py-8 rounded-xl 
@@ -731,21 +730,27 @@ export default function LandingPage() {
               Junte-se a milhares de pessoas 50+ que estão transformando suas vidas através das redes sociais.
             </p>
 
-            <a
-  href="https://pay.hotmart.com/D99483408X?off=sy32nphk&_hi=eyJjaWQiOiIxNzQ3MjQyMTc2NTIyODA3NjQ0NzI2NTE3NjcwOTAwIiwiYmlkIjoiMTc0NzI0MjE3NjUyMjgwNzY0NDcyNjUxNzY3MDkwMCIsInNpZCI6ImFkMmFlZDIzYWEzNTRiMTZhOTgzODFmZTJiYWUxODM5In0=.1747361783581&bid=1747361787902"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Button
-    className="bg-gradient-to-r from-pink-500 to-pink-700 hover:from-pink-600 hover:to-pink-800 text-white text-xl py-8 px-10 rounded-xl 
-    shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl 
-    border-b-4 border-pink-800 active:border-b-0 active:mt-1"
+       <div className="w-full flex justify-center px-4">
+  <a
+    href="https://pay.hotmart.com/D99483408X?off=sy32nphk&_hi=eyJjaWQiOiIxNzQ3MjQyMTc2NTIyODA3NjQ0NzI2NTE3NjcwOTAwIiwiYmlkIjoiMTc0NzI0MjE3NjUyMjgwNzY0NDcyNjUxNzY3MDkwMCIsInNpZCI6ImFkMmFlZDIzYWEzNTRiMTZhOTgzODFmZTJiYWUxODM5In0=.1747361783581&bid=1747361787902"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full max-w-lg"
   >
-    <Sparkles className="mr-2 h-6 w-6" />
-    Quero Transformar Minha Vida Digital
-    <ArrowRight className="ml-2 h-6 w-6" />
-  </Button>
-</a>
+    <Button
+      className="w-full bg-gradient-to-r from-pink-500 to-pink-700 hover:from-pink-600 hover:to-pink-800 
+      text-white text-base sm:text-xl py-7 px-7 sm:px-10 rounded-xl 
+      shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl 
+      border-b-4 border-pink-800 active:border-b-0 active:mt-1 text-center"
+    >
+      <Sparkles className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
+      Quero Transformar <br/>Minha Vida Digital
+    </Button>
+  </a>
+</div>
+
+
+
 
 
             <p className="mt-8 text-lg text-pink-600 font-medium">
