@@ -26,7 +26,7 @@ export default function LandingPage() {
   <div className="container px-4 mx-auto max-w-6xl relative z-10">
     <div className="grid md:grid-cols-2 gap-16 items-center">
       <div className="space-y-8">
-        <img src="/logo.png" alt="Logo" className="h-20 md:h-24 w-auto" />
+        <img src="/logoazul.png" alt="Logo" className="h-20 md:h-24 w-auto" />
 
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-700 to-pink-500 leading-tight">
@@ -359,17 +359,17 @@ export default function LandingPage() {
               {
                 name: "Maria Helena, 62 anos",
                 text: "Este curso mudou minha vida! Agora consigo compartilhar minhas receitas no Instagram e já tenho mais de 500 seguidores.",
-                image: "/61.jpg?height=100&width=100",
+                image: "/people2.png?height=100&width=100",
               },
               {
                 name: "Carlos Alberto, 58 anos",
                 text: "Nunca pensei que poderia me tornar um criador de conteúdo. Hoje compartilho minhas viagens e conecto-me com pessoas do mundo todo.",
-                image: "/72.jpg?height=100&width=100",
+                image: "/people1.png?height=100&width=100",
               },
               {
                 name: "Lúcia Ferreira, 65 anos",
                 text: "As dicas de fotografia e vídeo são excelentes! Consegui melhorar muito a qualidade do meu conteúdo sem gastar com equipamentos caros.",
-                image: "/52.jpg?height=100&width=100",
+                image: "/people3.png?height=100&width=100",
               },
             ].map((testimonial, index) => (
               <div
