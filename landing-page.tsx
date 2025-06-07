@@ -80,7 +80,7 @@ export default function LandingPage() {
         loop
         playsInline
       >
-        <source src="/monicavsl2.mp4" type="video/mp4" />
+        <source src="/monicavsl3.mp4" type="video/mp4" />
         Seu navegador não suporta vídeos HTML5.
       </video>
       <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-40 transition-all">
@@ -102,7 +102,7 @@ export default function LandingPage() {
       className="w-full h-full object-cover"
       playsInline
     >
-      <source src="/monicavsl2.mp4" type="video/mp4" />
+      <source src="/monicavsl3.mp4" type="video/mp4" />
       Seu navegador não suporta vídeos HTML5.
     </video>
   )}
