@@ -4,6 +4,7 @@ import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { CheckCircle, ChevronRight, Play, ArrowRight, Sparkles, Star, Clock, Shield, Check } from "lucide-react"
 import Image from "next/image"
+import LimitedOfferBanner from "./components/LimitedOfferBanner.tsx"
 
 export default function LandingPage() {
   const [showVideo, setShowVideo] = useState(false)
@@ -19,7 +20,9 @@ export default function LandingPage() {
   }
 
   return (
+    
     <div className="flex flex-col min-h-screen">
+      <LimitedOfferBanner />
       {/* Hero Section with VSL */}
 <section className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-r from-pink-100 via-purple-50 to-pink-100">
   <div className="absolute inset-0 bg-cover bg-center opacity-5"></div>
@@ -30,14 +33,13 @@ export default function LandingPage() {
 
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-700 to-pink-500 leading-tight">
-                <span>Se sente ultrapassado</span> pela tecnologia?
+                <span>Nunca é tarde para aprender e se</span> destacar nas redes sociais
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-pink-700">
-                Acha que criar conteúdo nas redes sociais <span className="text-pink-600">não é para você?</span>
+                Mesmo sem saber nada de tecnologia, você pode criar conteúdo, crescer online <span className="text-pink-600"><br/>e até fazer uma renda extra!</span>
               </h2>
               <p className="text-xl text-gray-600">
-                Descubra como pessoas 50+ estão transformando suas vidas, compartilhando experiências e até gerando
-                renda extra com as redes sociais.
+                Um curso simples, direto e feito para quem tem mais de 50 anos e quer perder o medo da Internet, aprender passo a passo e se sentir confiante para usar as redes sociais com liberdade.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -47,15 +49,20 @@ export default function LandingPage() {
   className="block w-fit max-w-full overflow-hidden"
 >
   <Button
-    className="bg-gradient-to-r from-pink-500 to-pink-700 hover:from-pink-600 hover:to-pink-800 text-lg py-7 px-8 rounded-xl shadow-lg 
+    className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 
+    text-lg md:text-lg text-base py-5 md:py-7 px-6 md:px-8 rounded-xl shadow-lg 
     transform transition-all duration-300 hover:scale-105 hover:shadow-xl 
-    border-b-4 border-pink-800 active:border-b-0 active:mt-1"
+    border-b-4 border-pink-800 active:border-b-0 active:mt-1 
+    w-full sm:w-auto"
   >
     <Sparkles className="mr-2 h-5 w-5" />
-    Quero Aprender Agora
+    <span className="text-sm text-white sm:text-base md:text-lg text-center">
+      Quero Vencer o Medo da Tecnologia
+    </span>
     <ChevronRight className="ml-2 h-5 w-5" />
   </Button>
 </a>
+
 
               </div>
             </div>
@@ -73,7 +80,7 @@ export default function LandingPage() {
         loop
         playsInline
       >
-        <source src="/monicavsl.mp4" type="video/mp4" />
+        <source src="/monicavsl2.mp4" type="video/mp4" />
         Seu navegador não suporta vídeos HTML5.
       </video>
       <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-40 transition-all">
@@ -95,7 +102,7 @@ export default function LandingPage() {
       className="w-full h-full object-cover"
       playsInline
     >
-      <source src="/monicavsl.mp4" type="video/mp4" />
+      <source src="/monicavsl2.mp4" type="video/mp4" />
       Seu navegador não suporta vídeos HTML5.
     </video>
   )}
@@ -139,27 +146,42 @@ export default function LandingPage() {
       <section className="py-20 bg-gradient-to-br from-pink-50 via-white to-purple-50">
         <div className="container px-4 mx-auto max-w-6xl">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-800 via-pink-600 to-pink-800">
-              Você já se sentiu assim?
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-800 via-pink-600 to-pink-800">
+              O que você vai conquistar<br/>com esse curso :
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Perdido com a tecnologia",
-                description: "Sente que o mundo digital avança rápido demais e você está ficando para trás.",
-                icon: <CheckCircle className="h-8 w-8 text-pink-600" />,
+                title: "Aprenda a usar redes sociais do zero",
+                description: "Chega de confusão, aqui você vai aprender como usar Instagram, Youtube e até Whatsapp com calma e clareza",
+                icon: <CheckCircle className="h-8 w-8 text-green-600" />,
               },
               {
-                title: "Inseguro para começar",
-                description: "Tem medo de cometer erros ou de não saber como usar as redes sociais corretamente.",
-                icon: <CheckCircle className="h-8 w-8 text-pink-600" />,
+                title: "Perca o medo de aparecer nas redes",
+                description: "Vamos te ensinar como gravar vídeos, tirar fotos e se expressar com confiança",
+                icon: <CheckCircle className="h-8 w-8 text-green-600" />,
               },
               {
-                title: "Sem saber por onde começar",
-                description: "Tantas plataformas, tantas opções... e nenhum guia específico para a nossa idade.",
-                icon: <CheckCircle className="h-8 w-8 text-pink-600" />,
+                title: "Descubra como gerar renda extra com o que você já sabe",
+                description: "Tem gente da sua idade vendendo, ensinando e criando, você também pode transformar conhecimento em dinheiro",
+                icon: <CheckCircle className="h-8 w-8 text-green-600" />,
+              },
+               {
+                title: "Divirta-se aprendendo algo novo e útil",
+                description: "A tecnologia pode sim ser leve, divertida e até transformar sua rotina. E você vai ver isso acontecer",
+                icon: <CheckCircle className="h-8 w-8 text-green-600" />,
+              },
+              {
+                title: "Conquiste a sua independência digital",
+                description: "Chega de depender dos outros para mexer no celular. Aqui você aprende a usar a tecnologia com liberdade",
+                icon: <CheckCircle className="h-8 w-8 text-green-600" />,
+              },
+              {
+                title: "Faça parte de uma comunidade acolhedora 50+",
+                description: "Você vai aprender com apoio, junto de outras pessoas que também estão dando os primeiros passos",
+                icon: <CheckCircle className="h-8 w-8 text-green-600" />,
               },
             ].map((item, index) => (
               <div
@@ -187,13 +209,30 @@ export default function LandingPage() {
             <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
           </svg>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            "O mundo é digital, e nós precisamos interagir"
+            Sabe o que acontece quando você <br/>aprende a usar as redes?
           </h2>
           <p className="text-xl opacity-90 text-white">
-            Dê uma chance para novas possibilidades. A vida está aqui para ser aproveitada e nós, da terceira idade, ainda
-            podemos nos desafiar. Divirta-se no processo e esteja aberto às possibilidades!
+            Você ganha voz, independência e novas possibilidades!<br/> Se você tem 50+ e quer dominar o básico sem complicação, este curso é pra você!
           </p>
-          <p className="mt-6 text-lg font-medium text-white">- Mônica Amoroso</p>
+          <div className="mt-12 flex justify-center">
+  <a
+  href="https://pay.hotmart.com/D99483408X?off=sy32nphk&_hi=eyJjaWQiOiIxNzQ3MjQyMTc2NTIyODA3NjQ0NzI2NTE3NjcwOTAwIiwiYmlkIjoiMTc0NzI0MjE3NjUyMjgwNzY0NDcyNjUxNzY3MDkwMCIsInNpZCI6ImFkMmFlZDIzYWEzNTRiYWgzODFmZTJiYWUxODM5In0=.1747361783581&bid=1747361787902"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block w-full sm:w-fit text-center"
+>
+  <Button
+    className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 
+               text-white text-lg sm:text-2xl py-5 sm:py-6 px-6 sm:px-14 rounded-xl 
+               shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl 
+               border-b-4 border-pink-800 active:border-b-0 active:mt-1 
+               w-full sm:w-auto flex items-center justify-center"
+  >
+    <span className="text-sm text-white sm:text-2xl">Clique Agora e Veja como Funciona</span>
+    <ChevronRight className="ml-2 sm:ml-3 h-5 sm:h-7 w-5 sm:w-7" />
+  </Button>
+</a>
+</div>
         </div>
       </section>
 
@@ -201,11 +240,11 @@ export default function LandingPage() {
 <section className="py-20 bg-gradient-to-bl from-purple-50 via-white to-pink-50">
   <div className="container px-4 mx-auto max-w-6xl">
     <div className="max-w-3xl mx-auto text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-br from-pink-700 via-pink-500 to-pink-700">
-        Apresentando: <span className="text-pink-600">Criação de Conteúdos para 50+</span>
+      <h2 className="text-3xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-br from-pink-700 via-pink-500 to-pink-700">
+        Apresentando:<br/><span className="text-pink-600">Criação de Conteúdos para 50+</span>
       </h2>
       <p className="text-xl text-gray-600">
-        Um material completo para ajudar você a iniciar sua jornada digital com confiança e autenticidade.
+        Um material completo para ajudar você a iniciar sua jornada digital<br/>com confiança e autenticidade.
       </p>
     </div>
 
@@ -228,7 +267,7 @@ export default function LandingPage() {
         <div className="bg-gradient-to-r from-white to-pink-50 p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
           <div className="flex items-start gap-4">
             <div className="bg-pink-100 p-2 rounded-full mt-1">
-              <Check className="h-5 w-5 text-pink-600" />
+              <Check className="h-5 w-5 text-green-600" />
             </div>
             <div>
               <h3 className="text-xl font-bold mb-2 text-pink-700">Primeiros Passos no Mundo Digital</h3>
@@ -241,7 +280,7 @@ export default function LandingPage() {
         <div className="bg-gradient-to-r from-white to-pink-50 p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
           <div className="flex items-start gap-4">
             <div className="bg-pink-100 p-2 rounded-full mt-1">
-              <Check className="h-5 w-5 text-pink-600" />
+              <Check className="h-5 w-5 text-green-600" />
             </div>
             <div>
               <h3 className="text-xl font-bold mb-2 text-pink-700">Encontrando sua Voz Autêntica</h3>
@@ -254,7 +293,7 @@ export default function LandingPage() {
         <div className="bg-gradient-to-r from-white to-pink-50 p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
           <div className="flex items-start gap-4">
             <div className="bg-pink-100 p-2 rounded-full mt-1">
-              <Check className="h-5 w-5 text-pink-600" />
+              <Check className="h-5 w-5 text-green-600" />
             </div>
             <div>
               <h3 className="text-xl font-bold mb-2 text-pink-700">Universo Digital na Prática</h3>
@@ -265,7 +304,7 @@ export default function LandingPage() {
         <div className="bg-gradient-to-r from-white to-pink-50 p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
           <div className="flex items-start gap-4">
             <div className="bg-pink-100 p-2 rounded-full mt-1">
-              <Check className="h-5 w-5 text-pink-600" />
+              <Check className="h-5 w-5 text-green-600" />
             </div>
             <div>
               <h3 className="text-xl font-bold mb-2 text-pink-700">Dicas e Tutoriais Passo a Passo</h3>
@@ -278,56 +317,60 @@ export default function LandingPage() {
   </div>
 
   {/* Botão centralizado no final da seção */}
-  <div className="mt-12 flex justify-center">
+  <div className="mt-12 w-full px-4 sm:px-0">
   <a
     href="https://pay.hotmart.com/D99483408X?off=sy32nphk&_hi=eyJjaWQiOiIxNzQ3MjQyMTc2NTIyODA3NjQ0NzI2NTE3NjcwOTAwIiwiYmlkIjoiMTc0NzI0MjE3NjUyMjgwNzY0NDcyNjUxNzY3MDkwMCIsInNpZCI6ImFkMmFlZDIzYWEzNTRiYWgzODFmZTJiYWUxODM5In0=.1747361783581&bid=1747361787902"
     target="_blank"
     rel="noopener noreferrer"
+    className="block w-full sm:w-fit text-center mx-auto"
   >
     <Button
-      className="bg-gradient-to-r from-pink-500 to-pink-700 hover:from-pink-600 hover:to-pink-800 text-white text-2xl py-6 px-6 sm:px-14 rounded-xl
-                 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl
-                 border-b-4 border-pink-800 active:border-b-0 active:mt-1"
+      className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 
+                 text-white text-base sm:text-2xl py-5 sm:py-6 px-4 sm:px-14 rounded-xl 
+                 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl 
+                 border-b-4 border-pink-800 active:border-b-0 active:mt-1 
+                 w-full sm:w-auto flex items-center justify-center"
     >
-      Quero Aprender Agora
-      <ChevronRight className="ml-3 h-7 w-7" />
+      <span className="text-sm text-white sm:text-2xl">Quero Usar as Redes Sociais com Confiança</span>
+      <ChevronRight className="ml-2 sm:ml-3 h-5 sm:h-7 w-5 sm:w-7" />
     </Button>
   </a>
 </div>
+
 
 </section>
 
       {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-tr from-purple-100 via-pink-50 to-purple-100">
         <div className="container px-4 mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-pink-800 to-pink-600">
-            Benefícios de se Tornar um Influenciador 50+
+          <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-pink-800 to-pink-600">
+            Este curso é pra você que…
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Estímulo Mental Contínuo",
-                description: "Mantenha sua mente ativa com desafios criativos e aprendizado constante.",
+                title: "Quer se reinventar e provar que nunca é tarde",
+                description: "Está pronto para viver algo novo, aprender com leveza e mostrar que a idade é só um número.",
               },
               {
-                title: "Compartilhamento de Sabedoria",
-                description: "Valorize e compartilhe o conhecimento acumulado ao longo da vida.",
+                title: "Sente que tem muito a compartilhar com o mundo",
+                description: "Deseja transformar sua experiência de vida em algo que inspira, conecta e ajuda outras pessoas.",
               },
               {
-                title: "Ampliação do Círculo Social",
-                description: "Faça novas amizades e conecte-se com pessoas de interesses similares.",
+                title: "Quer usar a internet de forma criativa e segura",
+                description: "Tem vontade de aprender a usar as redes sociais, mas do seu jeito — com clareza, calma e apoio.",
               },
               {
-                title: "Aumento da Autoestima",
-                description: "Sinta-se valorizado e reconhecido por suas contribuições únicas.",
+                title: "Está cansado de só assistir e quer participar de verdade",
+                description: "Deseja sair do papel de espectador e começar a criar conteúdo, se expressar e ser ouvido.",
               },
               {
-                title: "Combate à Solidão",
-                description: "Participe de comunidades online e mantenha-se conectado com o mundo.",
+                title: "Quer transformar seu tempo livre em renda extra",
+                description: "Descubra como sua experiência, carisma e histórias de vida podem ser fonte de inspiração — e de lucro — nas redes sociais. Ganhe dinheiro sendo quem você é!",
               },
               {
-                title: "Expressão Criativa",
-                description: "Descubra novas formas de expressar sua criatividade e talentos.",
+                title: "Quer se divertir, aprender e se sentir vivo",
+                description: "Acredita que aprender pode (e deve!) ser leve, divertido e cheio de significado.",
               },
             ].map((benefit, index) => (
               <div
@@ -336,7 +379,7 @@ export default function LandingPage() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="bg-pink-100 p-2 rounded-full">
-                    <CheckCircle className="h-6 w-6 text-pink-600" />
+                    <CheckCircle className="h-6 w-6 text-green-600" />
                   </div>
                   <h3 className="text-xl font-bold text-pink-700">{benefit.title}</h3>
                 </div>
@@ -516,8 +559,8 @@ export default function LandingPage() {
       <section className="py-16 bg-gradient-to-tr from-purple-100 via-pink-50 to-purple-100">
         <div className="container px-4 mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <div className="inline-block px-4 py-1 rounded-full bg-pink-100 text-pink-800 text-sm font-medium shadow-sm mb-4">
-              Exclusivo
+            <div className="inline-block px-6 py-1 rounded-full bg-gradient-to-r from-red-600 to-red-500 text-white md:text-2x1 font-medium shadow-sm mb-4">
+              BÔNUS ESPECIAL POR TEMPO LIMITADO!
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-br from-pink-700 via-pink-500 to-pink-700">
               Bônus Especiais
@@ -608,6 +651,108 @@ export default function LandingPage() {
                 </div>
               </div>
             </div>
+
+            <div className="bg-gradient-to-br from-white to-pink-50 p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="bg-pink-100 p-3 rounded-xl">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-8 w-8 text-pink-600"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <line x1="10" y1="9" x2="8" y2="9"></line>
+                  </svg>
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="text-xl font-bold text-pink-700">Criação de Conteúdos para 50+</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    O guia mais completo e acolhedor para quem quer começar a criar nas redes sociais, mesmo sem experiência!
+                  </p>
+                  <ul className="space-y-2">
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-green-500" />
+                      <span className="text-gray-600">Passo a passo para Instagram, Facebook e YouTube</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-green-500" />
+                      <span className="text-gray-600">Exercícios e tutoriais simples para aplicar no seu ritmo</span>
+                    </li>
+                  </ul>
+                       <ul className="space-y-2">
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-green-500" />
+                      <span className="text-gray-600">Estratégias reais usadas por uma influenciadora 50+</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-green-500" />
+                      <span className="text-gray-600">Mais de 70 páginas com ideias, dicas e plano de conteúdo</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-white to-pink-50 p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="bg-pink-100 p-3 rounded-xl">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-8 w-8 text-pink-600"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <line x1="10" y1="9" x2="8" y2="9"></line>
+                  </svg>
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="text-xl font-bold text-pink-700">EBOOK - Como se Apresentar no Instagram sem Medo</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    Guia simples e acolhedor para você mostrar quem é de forma leve, verdadeira e sem travas!
+                  </p>
+                  <ul className="space-y-2">
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-green-500" />
+                      <span className="text-gray-600">Dicas práticas para perder o medo da câmera</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-green-500" />
+                      <span className="text-gray-600">Estratégias para gravar vídeos com mais segurança</span>
+                    </li>
+                  </ul>
+                      <ul className="space-y-2">
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-green-500" />
+                      <span className="text-gray-600">Roteiro para sua primeira apresentação nas redes</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-green-500" />
+                      <span className="text-gray-600">Exercícios para fortalecer sua autoconfiança digital</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -680,22 +825,46 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <a
+           <a
   href="https://pay.hotmart.com/D99483408X?off=sy32nphk&_hi=eyJjaWQiOiIxNzQ3MjQyMTc2NTIyODA3NjQ0NzI2NTE3NjcwOTAwIiwiYmlkIjoiMTc0NzI0MjE3NjUyMjgwNzY0NDcyNjUxNzY3MDkwMCIsInNpZCI6ImFkMmFlZDIzYWEzNTRiMTZhOTgzODFmZTJiYWUxODM5In0=.1747361783581&bid=1747361787902"
   target="_blank"
   rel="noopener noreferrer"
   className="block w-full max-w-full overflow-hidden"
 >
   <Button
-    className="w-full bg-gradient-to-r from-pink-500 to-pink-700 hover:from-pink-600 hover:to-pink-800 text-white text-lg py-8 rounded-xl 
-    shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl 
-    border-b-4 border-pink-800 active:border-b-0 active:mt-1"
+    className="
+      w-full 
+      max-w-full
+      bg-gradient-to-r from-pink-500 to-pink-700 
+      hover:from-pink-600 hover:to-pink-800 
+      text-white 
+      text-lg 
+      py-8 
+      rounded-xl 
+      shadow-lg 
+      transform transition-all duration-300 
+      hover:scale-105 hover:shadow-xl 
+      border-b-4 border-pink-800 
+      active:border-b-0 active:mt-1
+      
+      /* Ajustes para mobile */
+      py-6
+      sm:py-8
+      flex
+      items-center
+      justify-center
+      gap-2
+      overflow-hidden
+    "
   >
-    <Sparkles className="mr-2 h-5 w-5" />
-    Quero Começar Agora
-    <ArrowRight className="ml-2 h-5 w-5" />
+    <Sparkles className="h-5 w-5" />
+    <span className="whitespace-normal text-white break-words text-center">
+      Quero Começar Minha Transformação Agora
+    </span>
+    <ArrowRight className="h-5 w-5" />
   </Button>
 </a>
+
 
 
             <div className="mt-6 flex justify-center">
