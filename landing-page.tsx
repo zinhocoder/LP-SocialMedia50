@@ -38,6 +38,10 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 
+const CHECKOUT_URL =
+  "https://pay.hotmart.com/D99483408X?off=sy32nphk&_hi=eyJjaWQiOiIxNzQ3MzYxNzg4MzM2ODgwOTk5NjY1MTc1MjM1NzAwIiwiYmlkIjoiMTc0NzM2MTc4ODMzNjg4MDk5OTY2NTE3NTIzNTcwMCIsInNpZCI6ImE3NDI0OTdmMThhNDQ4MDlhM2UyOTg0YzM0YWJlNmFlIn0=.1750029655469&bid=1750029659657"
+const WHATSAPP_URL = "https://wa.me/5511989397173"
+
 export default function LandingPage() {
   const [showVideoControls, setShowVideoControls] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -212,18 +216,20 @@ export default function LandingPage() {
 
           {/* CTA Principal Premium */}
           <div className="text-center px-2 sm:px-4 md:px-0">
-            <Button
-              className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-500 text-yellow-900 text-base sm:text-lg md:text-2xl py-4 sm:py-6 md:py-10 px-4 sm:px-6 md:px-16 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-2xl 
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+              <Button
+                className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-500 text-yellow-900 text-base sm:text-lg md:text-2xl py-4 sm:py-6 md:py-10 px-4 sm:px-6 md:px-16 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-2xl 
               transform transition-all duration-300 hover:scale-105 md:hover:scale-110 hover:shadow-3xl 
               border-b-4 md:border-b-8 border-yellow-600 active:border-b-2 md:active:border-b-4 active:mt-1 md:active:mt-2 font-black relative overflow-hidden group w-full max-w-md sm:max-w-lg md:max-w-none md:w-auto mx-auto"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 group-hover:animate-pulse"></div>
-              <div className="flex items-center justify-center gap-2 md:gap-4">
-                <Rocket className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 animate-bounce flex-shrink-0" />
-                <span className="leading-tight">QUERO APRENDER AGORA</span>
-                <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 animate-bounce flex-shrink-0" />
-              </div>
-            </Button>
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 group-hover:animate-pulse"></div>
+                <div className="flex items-center justify-center gap-2 md:gap-4">
+                  <Rocket className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 animate-bounce flex-shrink-0" />
+                  <span className="leading-tight">QUERO APRENDER AGORA</span>
+                  <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 animate-bounce flex-shrink-0" />
+                </div>
+              </Button>
+            </a>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-8 text-white mt-4 sm:mt-6 md:mt-8 bg-black/20 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-6 border border-yellow-400/30 mx-2 sm:mx-4 md:mx-0">
               <div className="flex items-center gap-2 md:gap-3">
@@ -328,17 +334,19 @@ export default function LandingPage() {
           </div>
 
           <div className="text-center px-2 sm:px-4 md:px-0">
-            <Button
-              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-base sm:text-lg md:text-xl py-4 sm:py-6 md:py-8 px-6 sm:px-8 md:px-12 rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl 
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+              <Button
+                className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-base sm:text-lg md:text-xl py-4 sm:py-6 md:py-8 px-6 sm:px-8 md:px-12 rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl 
               transform transition-all duration-300 hover:scale-105 hover:shadow-2xl 
               border-b-4 md:border-b-6 border-purple-800 active:border-b-2 active:mt-1 font-bold w-full max-w-sm sm:max-w-md md:max-w-none md:w-auto mx-auto"
-            >
-              <div className="flex items-center justify-center gap-2 md:gap-3">
-                <BookOpen className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
-                <span className="leading-tight text-white">Quero aprender passo a passo</span>
-                <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
-              </div>
-            </Button>
+              >
+                <div className="flex items-center justify-center gap-2 md:gap-3">
+                  <BookOpen className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
+                  <span className="leading-tight text-white">Quero aprender passo a passo</span>
+                  <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
+                </div>
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -484,17 +492,19 @@ export default function LandingPage() {
           </div>
 
           <div className="text-center px-2 sm:px-4 md:px-0">
-            <Button
-              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-base sm:text-lg md:text-xl py-4 sm:py-6 md:py-8 px-6 sm:px-8 md:px-12 rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl 
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+              <Button
+                className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-base sm:text-lg md:text-xl py-4 sm:py-6 md:py-8 px-6 sm:px-8 md:px-12 rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl 
               transform transition-all duration-300 hover:scale-105 hover:shadow-2xl 
               border-b-4 md:border-b-6 border-purple-800 active:border-b-2 active:mt-1 font-bold w-full max-w-sm sm:max-w-md md:max-w-none md:w-auto mx-auto"
-            >
-              <div className="flex items-center justify-center gap-2 md:gap-3">
-                <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
-                <span className="leading-tight text-white">Quero começar agora</span>
-                <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
-              </div>
-            </Button>
+              >
+                <div className="flex items-center justify-center gap-2 md:gap-3">
+                  <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
+                  <span className="leading-tight text-white">Quero começar agora</span>
+                  <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
+                </div>
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -609,17 +619,19 @@ export default function LandingPage() {
           </div>
 
           <div className="text-center px-2 sm:px-4 md:px-0">
-            <Button
-              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-base sm:text-lg md:text-xl py-4 sm:py-6 md:py-8 px-6 sm:px-8 md:px-12 rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl 
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+              <Button
+                className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-base sm:text-lg md:text-xl py-4 sm:py-6 md:py-8 px-6 sm:px-8 md:px-12 rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl 
               transform transition-all duration-300 hover:scale-105 hover:shadow-2xl 
               border-b-4 md:border-b-6 border-purple-800 active:border-b-2 active:mt-1 font-bold w-full max-w-sm sm:max-w-md md:max-w-none md:w-auto mx-auto"
-            >
-              <div className="flex items-center justify-center gap-2 md:gap-3">
-                <Heart className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
-                <span className="leading-tight text-white">Quero aprender com a Mônica agora</span>
-                <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
-              </div>
-            </Button>
+              >
+                <div className="flex items-center justify-center gap-2 md:gap-3">
+                  <Heart className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
+                  <span className="leading-tight text-white">Quero aprender com a Mônica agora</span>
+                  <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
+                </div>
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -806,7 +818,7 @@ export default function LandingPage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 mb-4 sm:mb-6 md:mb-8 mt-4">
               <div className="bg-yellow-100 p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl md:rounded-3xl">
-                <BookOpen className="h-8 w-8 sm:h-12 sm:w-12 md:h-16 md:w-16 text-yellow-600" />
+                <BookOpen className="h-8 w-8 sm:h-12 sm:w-12 md:h-16 md:h-16 text-yellow-600" />
               </div>
               <div className="text-center sm:text-left flex-1">
                 <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4 leading-tight">
@@ -839,8 +851,9 @@ export default function LandingPage() {
           </div>
 
           <div className="px-2 sm:px-4 md:px-0 mb-6 sm:mb-12 md:mb-16">
-            <Button
-              className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-yellow-900 
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+              <Button
+                className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-yellow-900 
     text-sm sm:text-lg md:text-2xl 
     py-3 sm:py-6 md:py-10 
     px-3 sm:px-6 md:px-16 
@@ -852,16 +865,17 @@ export default function LandingPage() {
     active:mt-1 md:active:mt-2 
     font-extrabold w-full max-w-xs sm:max-w-lg md:max-w-none 
     md:w-auto mx-auto"
-            >
-              <div className="flex items-center justify-center gap-1 sm:gap-2 md:gap-4">
-                <Sparkles className="h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:w-8 flex-shrink-0" />
-                <span className="leading-tight text-center">
-                  SIM, QUERO TODOS OS BÔNUS
-                  <span className="hidden sm:inline"> (enquanto ainda estão no ar!)</span>
-                </span>
-                <ArrowRight className="h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:w-8 flex-shrink-0" />
-              </div>
-            </Button>
+              >
+                <div className="flex items-center justify-center gap-1 sm:gap-2 md:gap-4">
+                  <Sparkles className="h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:h-8 flex-shrink-0" />
+                  <span className="leading-tight text-center">
+                    SIM, QUERO TODOS OS BÔNUS
+                    <span className="hidden sm:inline"> (enquanto ainda estão no ar!)</span>
+                  </span>
+                  <ArrowRight className="h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:h-8 flex-shrink-0" />
+                </div>
+              </Button>
+            </a>
           </div>
 
           <div className="bg-white bg-opacity-20 p-4 sm:p-6 md:p-10 rounded-xl sm:rounded-2xl md:rounded-3xl backdrop-blur-sm border border-white/30 mx-2 sm:mx-4 md:mx-0">
@@ -947,12 +961,14 @@ export default function LandingPage() {
                 <Phone className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 flex-shrink-0" />
                 <span className="text-center leading-tight">Quer falar direto com a gente no WhatsApp?</span>
               </h3>
-              <Button className="bg-green-500 hover:bg-green-600 text-white font-bold text-sm sm:text-base md:text-lg py-3 md:py-4 px-4 sm:px-6 md:px-8 rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg w-full sm:w-auto">
-                <div className="flex items-center justify-center gap-2 md:gap-3">
-                  <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
-                  <span className="leading-tight text-white">Clique aqui para falar com nossa equipe</span>
-                </div>
-              </Button>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <Button className="bg-green-500 hover:bg-green-600 text-white font-bold text-sm sm:text-base md:text-lg py-3 md:py-4 px-4 sm:px-6 md:px-8 rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg w-full sm:w-auto">
+                  <div className="flex items-center justify-center gap-2 md:gap-3">
+                    <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
+                    <span className="leading-tight text-white">Clique aqui para falar com nossa equipe</span>
+                  </div>
+                </Button>
+              </a>
             </div>
           </div>
         </div>
