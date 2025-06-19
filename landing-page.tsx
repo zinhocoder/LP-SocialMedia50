@@ -39,7 +39,7 @@ import {
 import Image from "next/image"
 
 const CHECKOUT_URL =
-  "https://pay.hotmart.com/D99483408X?off=sy32nphk&_hi=eyJjaWQiOiIxNzQ3MzYxNzg4MzM2ODgwOTk5NjY1MTc1MjM1NzAwIiwiYmlkIjoiMTc0NzM2MTc4ODMzNjg4MDk5OTY2NTE3NTIzNTcwMCIsInNpZCI6ImE3NDI0OTdmMThhNDQ4MDlhM2UyOTg0YzM0YWJlNmFlIn0=.1750029655469&bid=1750029659657"
+  "https://pay.hotmart.com/D99483408X?checkoutMode=10"
 const WHATSAPP_URL = "https://wa.me/5511989397173"
 
 export default function LandingPage() {
